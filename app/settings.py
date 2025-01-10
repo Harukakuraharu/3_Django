@@ -135,3 +135,16 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Dogs API",
+    "VERSION": "0.1.0",
+    "SERVERS": [{"url": "http://127.0.0.1:8000/api"}],
+    "SCHEMA_PATH_PREFIX": "/api",
+    "SCHEMA_PATH_PREFIX_TRIM": True,
+    "COMPONENT_SPLIT_REQUEST": True,
+}

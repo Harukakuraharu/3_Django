@@ -9,6 +9,7 @@ psycopg2-binary = "^2.9.9"
 python-dotenv = "^1.0.1"
 gunicorn = "^23.0.0"
 django = "^5.1.4"
+pylint-django = "^2.6.1"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.3"
