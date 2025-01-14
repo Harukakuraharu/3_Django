@@ -26,4 +26,5 @@ urlpatterns = [
         SpectacularSwaggerView.as_view(url_name="schema"),
         name="swagger",
     ),
+    path("silk/", include("silk.urls", namespace="silk")),
 ]

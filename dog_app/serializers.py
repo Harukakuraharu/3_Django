@@ -4,13 +4,8 @@ from dog_app import models
 
 
 class DogSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.Dog
-        fields = "__all__"
-
-
-class DogGetSerializer(serializers.ModelSerializer):
-    breeds_age = serializers.IntegerField()
+    breeds_age = serializers.IntegerField(read_only=True)
+    dogs_count = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = models.Dog
@@ -24,17 +19,12 @@ class DogGetSerializer(serializers.ModelSerializer):
             "favorite_food",
             "favorite_toy",
             "breeds_age",
+            "dogs_count",
         )
 
 
 class BreedSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.Breed
-        fields = "__all__"
-
-
-class BreedGetSerializer(serializers.ModelSerializer):
-    dogs_count = serializers.IntegerField()
+    dogs_count = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = models.Breed

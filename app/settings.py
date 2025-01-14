@@ -148,3 +148,7 @@ SPECTACULAR_SETTINGS = {
     "SCHEMA_PATH_PREFIX_TRIM": True,
     "COMPONENT_SPLIT_REQUEST": True,
 }
+
+
+MIDDLEWARE.append("silk.middleware.SilkyMiddleware")
+INSTALLED_APPS.append("silk")
