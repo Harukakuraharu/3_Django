@@ -18,6 +18,7 @@ Including another URLconf
 from django.urls import include, path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
+
 urlpatterns = [
     path("", include("dog_app.urls")),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),

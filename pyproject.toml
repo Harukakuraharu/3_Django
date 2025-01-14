@@ -10,6 +10,7 @@ python-dotenv = "^1.0.1"
 gunicorn = "^23.0.0"
 django = "^5.1.4"
 pylint-django = "^2.6.1"
+pytest-django = "^4.9.0"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.3"
@@ -19,6 +20,7 @@ isort = "^5.13.2"
 black = "^24.10.0"
 drf-spectacular = "^0.28.0"
 django-silk = "^5.3.2"
+model-bakery = "^1.20.1"
 
 [build-system]
 requires = ["poetry-core"]
@@ -47,11 +49,8 @@ disable = ["C0114", "C0115", "C0116", "W0511", "R0901"]
 [tool.mypy]
 plugins = ["mypy_django_plugin.main"]
 
-[tool.django-stubs]
-django_settings_module = ["backend_clean_environment.settings"]
-
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE="backend_clean_environment.settings"
+DJANGO_SETTINGS_MODULE="app.settings"
 # python_files = ["test_*.py"]
 # python_functions = ["test_*"]
 # testpaths = ["tests"]
